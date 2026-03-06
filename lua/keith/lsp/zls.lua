@@ -1,0 +1,7 @@
+vim.lsp.config('zls', {
+    cmd = { 'zls' },
+    filetypes = { 'zig', 'zir' },
+    root_markers = { 'zls.json', 'build.zig', '.git' },
+})
+
+vim.lsp.enable('zls')

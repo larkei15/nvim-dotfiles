@@ -1,0 +1,5 @@
+require("keith.opts")
+require("keith.remap")
+require("keith.lazy")
+require("keith.lsp")
+require("lazy").setup("plugins")
