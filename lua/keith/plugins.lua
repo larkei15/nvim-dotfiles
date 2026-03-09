@@ -8,17 +8,17 @@ return {
         end,
     },
 
-    {
-        "nvim-telescope/telescope.nvim",
-        version = '*',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-            {
-                'nvim-telescope/telescope-fzf-native.nvim',
-                build = 'make',
-            },
-        },
-    },
+    --{
+    --    "nvim-telescope/telescope.nvim",
+    --    version = '*',
+    --    dependencies = {
+    --        'nvim-lua/plenary.nvim',
+    --        {
+    --            'nvim-telescope/telescope-fzf-native.nvim',
+    --            build = 'make',
+    --        },
+    --    },
+    --},
 
     {
         "nvim-mini/mini.pairs",
@@ -41,6 +41,27 @@ return {
         dependencies = {
             'nvim-lua/plenary.nvim'
         }
+    },
+
+    {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = true
+        -- use opts = {} for passing setup options
+        -- this is equivalent to setup({}) function
+    },
+
+    {
+        "ibhagwan/fzf-lua",
+        -- optional for icon support
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+        -- or if using mini.icons/mini.nvim
+        -- dependencies = { "nvim-mini/mini.icons" },
+        ---@module "fzf-lua"
+        ---@type fzf-lua.Config|{}
+        ---@diagnostic disable: missing-fields
+        opts = {}
+        ---@diagnostic enable: missing-fields
     },
 
     {
