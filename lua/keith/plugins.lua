@@ -76,6 +76,28 @@ return {
 		"neovim/nvim-lspconfig"
 	},
 
+    {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end,
+    },
+
+    {
+        "williamboman/mason-lspconfig.nvim",
+        config = function()
+            require("mason-lspconfig").setup({
+                -- list of language servers to install automatically
+                ensure_installed = {
+                    "lua_ls",
+                    "tsserver",
+                    "csharp-ls",
+                    "zls",
+                },
+            })
+        end
+    },
+
 	{
 		"hrsh7th/cmp-nvim-lsp"
 	},
